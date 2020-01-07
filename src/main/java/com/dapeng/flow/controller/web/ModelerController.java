@@ -51,7 +51,7 @@ public class ModelerController {
     private RuntimeService runtimeService;
 
 
-    @RequestMapping(value = "/index", method = RequestMethod.GET)
+    @RequestMapping(value = "index", method = RequestMethod.GET)
 	@ApiOperation(value = "流程定义列表主界面", produces = "application/json")
     public ModelAndView index(ModelAndView modelAndView) {
         modelAndView.setViewName("index");
@@ -78,7 +78,7 @@ public class ModelerController {
      * @param name     模型名称
      * @param key      模型key
      */
-    @RequestMapping(value = "/create",method = RequestMethod.GET)
+    @RequestMapping(value = "create",method = RequestMethod.GET)
 	@ApiOperation(value = "创建模型", produces = "application/json")
     public void create(HttpServletResponse response, String name, String key) throws IOException {
         logger.info("创建模型入参name：{},key:{}", name, key);

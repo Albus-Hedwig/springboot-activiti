@@ -18,6 +18,8 @@
 	        <td width="20%">模型key</td>
 	        <td width="40%">操作</td>
 	    </tr>
+
+			<#if modelList?? && modelList?size gt 0>
 	        <#list modelList as model>
 	        <tr>
 	            <td width="10%">${model.id}</td>
@@ -32,6 +34,7 @@
 	            </td>
 	        </tr>
 	       </#list>
+			</#if>
 	</table>
 </div>
 </body>
